@@ -171,3 +171,11 @@ body {
     /* background-color: red; */
     border-radius: 5px;
 }
+.google-map iframe {
+    margin: 25px 0 25px 0;
+    padding: 25px;
+    min-height: 70vh;
+    width: 95vw;
+    /* background-color: red; */
+    border-radius: 5px;
+}
