@@ -217,6 +217,7 @@ nav {
     grid-template-rows: repeat(8, 1fr);
     grid-template-columns: repeat(4, 25%);
     padding: 5px;
+    border-bottom-left-radius: 5px;
 }
 
 .n_bus {
@@ -243,8 +244,9 @@ nav {
 }
 
 button:hover {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
-    border-right: 1px solid rgba(0, 0, 0, 0.5);
+    border-bottom: 1px solid transparent;
+    border-right: 1px solid transparent;
+    border-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0) 60%, rgb(255, 255, 255)) 1;
 }
 
 /* ------ GRID COLUMNS ---------- */
@@ -343,13 +345,18 @@ button:hover {
     grid-row: 8;
 }
 
-.b82 {
+.b81 {
     grid-column: 2;
     grid-row: 8;
 }
 
-.b84 {
+.b82 {
     grid-column: 3;
+    grid-row: 8;
+}
+
+.b84 {
+    grid-column: 4;
     grid-row: 8;
 }
 /* ------ GRID COLUMNS END------- */

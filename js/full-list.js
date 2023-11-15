@@ -29231,6 +29231,8 @@ export const all_lines = {
         "stroke-width": 1
       }
     },
+    
+    
     {
       "type": "Feature",
       "geometry": {
@@ -61694,13 +61696,18 @@ export const all_lines = {
         ]
       },
       "properties": {
-        "name": "Bus 60",
+        "name": "Bus 60", // Vuelta?
         "styleUrl": "#line-795548-1000-nodesc",
         "stroke-opacity": 1,
         "stroke": "#795548",
         "stroke-width": 1
       }
     },
+
+
+
+
+
     {
       "type": "Feature",
       "geometry": {
@@ -63304,13 +63311,15 @@ export const all_lines = {
         ]
       },
       "properties": {
-        "name": "Bus 61",
+        "name": "Bus 61", // vuelta?
         "styleUrl": "#line-C2185B-1000-nodesc",
         "stroke-opacity": 1,
         "stroke": "#c2185b",
         "stroke-width": 1
       }
     },
+
+
     {
       "type": "Feature",
       "geometry": {
@@ -65361,7 +65370,7 @@ export const all_lines = {
         "stroke-width": 1
       }
     },
-    {
+    { 
       "type": "Feature",
       "geometry": {
         "type": "LineString",
@@ -71576,6 +71585,8 @@ export const all_lines = {
         "stroke-width": 1
       }
     },
+
+    //71 Vuelta 2
     {
       "type": "Feature",
       "geometry": {
@@ -73791,6 +73802,8 @@ export const all_lines = {
         "stroke-width": 1
       }
     },
+
+//71 vuelta 1
     {
       "type": "Feature",
       "geometry": {
