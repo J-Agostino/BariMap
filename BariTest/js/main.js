@@ -69,6 +69,8 @@ const buttonValues = {
   button2: [], // Button 3 has no paired values
 };
 
+
+/* Previous code
 const buttons = document.querySelectorAll('button');
 
 for (const button of buttons) {
@@ -84,7 +86,7 @@ for (const button of buttons) {
 			console.log(buttonIds, buttonIds.length);
 			if (this.style.color === "white") {
 				this.style.color = 'whitesmoke';
-				this.style.background = "rgba(0,0,0,0)"				
+				this.style.background = "rgba(0,0,0,0)"
 			} else {
 				this.style.color = "white";
 				this.style.background = "rgba(8, 8, 133, 0.8)"
@@ -99,6 +101,27 @@ for (const button of buttons) {
 		}
 
 	);
+}
+*/
+
+
+let buttons = document.querySelectorAll(".button")
+for (const button of buttons) {
+    button.addEventListener('click', function() {
+        let ids = this.id.split(' ');
+        let selectedLine = ids[0];
+
+        function mySelection() {
+            L.geoJSON(individualLines[selectedLine], {
+                color: "#dab600"
+            }).bindPopup(function(layer) {
+                return layer.feature.properties.name;
+            }).addTo(map);
+        }
+
+        mySelection(selectedLine); // Pass the selectedLine value to the function
+        console.log(selectedLine);
+    });
 }
 
 
@@ -135,6 +158,10 @@ for (let button of buttons) {
 // 		switch_0 = 0
 // 	}
 // });
+
+
+
+/*
 
 let b13
 let switch_1 = 0
@@ -860,6 +887,8 @@ button39.addEventListener("mouseup", (e) => {
 // }
 // ---------------- Lineas -------------------
 
+*/
+
 
 /*
 // Linea 10
@@ -874,6 +903,7 @@ L.geoJSON(individualLines.b13, {
 	return layer.feature.properties.name
 }).addTo(map)
 */
+
 /*
 // Linea 20
 const trying_20 = {
@@ -891,6 +921,8 @@ const trying_20 = {
 }
 
 // console.log(trying_20.off)
+*/
+
 /*
 // Linea 21
 L.geoJSON(individualLines.b21, {
@@ -1047,7 +1079,7 @@ L.geoJSON(individualLines.b61Ida, {
 	return layer.feature.properties.name
 }).addTo(map)
 
-// Linea 61 vuelta 
+// Linea 61 vuelta
 L.geoJSON(individualLines.b61Vuelta, {
 	color: "#c76706"
 }).bindPopup(function (layer) {
