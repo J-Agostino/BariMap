@@ -4346,7 +4346,7 @@ const b10 = {
             "name": "Bus 10",
             "styleUrl": "#line-FF5252-1000-nodesc",
             "stroke-opacity": 1,
-            "stroke": "#ff5252",
+            "stroke": "#3bd6c6",
             "stroke-width": 1
         }
     }]
@@ -8216,7 +8216,7 @@ const b13 = {
             "name": "Bus 13",
             "styleUrl": "#line-87CEAC-1000-nodesc",
             "stroke-opacity": 1,
-            "stroke": "#87ceac",
+            "stroke": "#43e8d8",
             "stroke-width": 1
         }
     }]
@@ -11826,7 +11826,7 @@ const b20 = {
             "name": "Bus 20",
             "styleUrl": "#line-3949AB-1000-nodesc",
             "stroke-opacity": 1,
-            "stroke": "#3949ab",
+            "stroke": "#004c4c",
             "stroke-width": 1
         }
     }]
@@ -15726,7 +15726,7 @@ const b21 = {
             "name": "Bus 21",
             "styleUrl": "#line-9C27B0-1000-nodesc",
             "stroke-opacity": 1,
-            "stroke": "#9c27b0",
+            "stroke": "#006666",
             "stroke-width": 1
         }
     }]
@@ -19346,7 +19346,7 @@ const b22Ida = {
                 "name": "Bus 22 Ida",
                 "styleUrl": "#line-CE93D8-1000-nodesc",
                 "stroke-opacity": 1,
-                "stroke": "#ce93d8",
+                "stroke": "#008080",
                 "stroke-width": 1
             }
         }
@@ -23048,7 +23048,7 @@ const b22Vuelta = {
             "name": "Bus 22 Vuelta",
             "styleUrl": "#line-0288D1-1000-nodesc",
             "stroke-opacity": 1,
-            "stroke": "#0288d1",
+            "stroke": "#008080",
             "stroke-width": 1
         }
     }]
@@ -23763,7 +23763,7 @@ const b30Ida = {
             "name": "Bus 30 Ida",
             "styleUrl": "#line-673AB7-1000-nodesc",
             "stroke-opacity": 1,
-            "stroke": "#673ab7",
+            "stroke": "#660066",
             "stroke-width": 1
         }
     }]
@@ -24368,7 +24368,7 @@ const b30Vuelta = {
             "name": "Bus 30 Vuelta",
             "styleUrl": "#line-0288D1-1000-nodesc",
             "stroke-opacity": 1,
-            "stroke": "#0288d1",
+            "stroke": "#660066",
             "stroke-width": 1
         }
     }]
@@ -25458,7 +25458,7 @@ const b31Ida = {
             "name": "Bus 31 Ida",
             "styleUrl": "#line-E6EE9C-1000-nodesc",
             "stroke-opacity": 1,
-            "stroke": "#e6ee9c",
+            "stroke": "#800080",
             "stroke-width": 1
         }
     }]
@@ -26538,7 +26538,7 @@ const b31Vuelta = {
             "name": "Bus 31 Vuelta",
             "styleUrl": "#line-C5E1A5-1000-nodesc",
             "stroke-opacity": 1,
-            "stroke": "#c5e1a5",
+            "stroke": "#800080",
             "stroke-width": 1
         }
     }]
@@ -27943,7 +27943,7 @@ const b40Ida = {
             "name": "Bus 40 Ida",
             "styleUrl": "#line-F48FB1-1000-nodesc",
             "stroke-opacity": 1,
-            "stroke": "#f48fb1",
+            "stroke": "#a70000",
             "stroke-width": 1
         }
     }]
@@ -29283,7 +29283,7 @@ const b40Vuelta = {
             "name": "Bus 40 Vuelta",
             "styleUrl": "#line-C2185B-1000-nodesc",
             "stroke-opacity": 1,
-            "stroke": "#c2185b",
+            "stroke": "#a70000",
             "stroke-width": 1
         }
     }]
@@ -31183,7 +31183,7 @@ const b41Ida = {
             "name": "Bus 41 Ida",
             "styleUrl": "#line-0097A7-1000-nodesc",
             "stroke-opacity": 1,
-            "stroke": "#0097a7",
+            "stroke": "#ff0000",
             "stroke-width": 1
         }
     }]
@@ -33118,7 +33118,7 @@ const b41Vuelta = {
             "name": "Bus 41 Vuelta",
             "styleUrl": "#line-006064-1000-nodesc",
             "stroke-opacity": 1,
-            "stroke": "#006064",
+            "stroke": "#ff0000",
             "stroke-width": 1
         }
     }]
@@ -37303,7 +37303,7 @@ const b50Ida = {
             "name": "Bus 50 Ida",
             "styleUrl": "#line-0F9D58-1000-nodesc",
             "stroke-opacity": 1,
-            "stroke": "#0f9d58",
+            "stroke": "#006203",
             "stroke-width": 1
         }
     }]
@@ -41048,7 +41048,7 @@ const b50Vuelta = {
             "name": "Bus 50 Vuelta",
             "styleUrl": "#line-097138-1000-nodesc",
             "stroke-opacity": 1,
-            "stroke": "#097138",
+            "stroke": "#006203",
             "stroke-width": 1
         }
     }]
@@ -43628,7 +43628,7 @@ const b51Ida = {
             "name": "Bus 51 Ida",
             "styleUrl": "#line-817717-1000-nodesc",
             "stroke-opacity": 1,
-            "stroke": "#817717",
+            "stroke": "#0f9200",
             "stroke-width": 1
         }
     }]
@@ -46218,7 +46218,7 @@ const b51Vuelta = {
             "name": "Bus 51 Vuelta",
             "styleUrl": "#line-AFB42B-1000-nodesc",
             "stroke-opacity": 1,
-            "stroke": "#afb42b",
+            "stroke": "#0f9200",
             "stroke-width": 1
         }
     }]
@@ -48853,7 +48853,7 @@ const b55Ida = {
             "name": "Bus 55 Ida",
             "styleUrl": "#line-FF5252-1000-nodesc",
             "stroke-opacity": 1,
-            "stroke": "#ff5252",
+            "stroke": "#30cb00",
             "stroke-width": 1
         }
     }]
@@ -51493,7 +51493,7 @@ const b55Vuelta = {
             "name": "Bus 55 Vuelta",
             "styleUrl": "#line-A52714-1000-nodesc",
             "stroke-opacity": 1,
-            "stroke": "#a52714",
+            "stroke": "#30cb00",
             "stroke-width": 1
         }
     }]
@@ -56148,7 +56148,7 @@ const b55bIda = {
             "name": "Bus 55B Ida",
             "styleUrl": "#line-FF0000-1000-nodesc",
             "stroke-opacity": 1,
-            "stroke": "#ff0000",
+            "stroke": "#4ae54a",
             "stroke-width": 1
         }
     }]
@@ -58693,7 +58693,7 @@ const b55bVuelta = {
             "name": "Bus 55B Vuelta",
             "styleUrl": "#line-A52714-1000-nodesc",
             "stroke-opacity": 1,
-            "stroke": "#a52714",
+            "stroke": "#4ae54a",
             "stroke-width": 1
         }
     }]
@@ -60094,7 +60094,7 @@ const b60Ida = {
             "name": "Bus 60 Ida",
             "styleUrl": "#line-4E342E-1000-nodesc",
             "stroke-opacity": 1,
-            "stroke": "#4e342e",
+            "stroke": "#c76706",
             "stroke-width": 1
         }
     }]
@@ -61814,7 +61814,7 @@ const b60Vuelta = {
             "name": "Bus 60 Vuelta", // Vuelta?
             "styleUrl": "#line-795548-1000-nodesc",
             "stroke-opacity": 1,
-            "stroke": "#795548",
+            "stroke": "#c76706",
             "stroke-width": 1
         }
     }]
@@ -63430,7 +63430,7 @@ const b61Ida = {
         "name": "Bus 61 Ida", 
         "styleUrl": "#line-C2185B-1000-nodesc",
         "stroke-opacity": 1,
-        "stroke": "#c2185b",
+        "stroke": "#f0750f",
         "stroke-width": 1
       }
     }
@@ -65487,7 +65487,7 @@ const b61Vuelta = {
         "name": "Bus 61 Vuelta",
         "styleUrl": "#line-EDA29B-1000-nodesc",
         "stroke-opacity": 1,
-        "stroke": "#eda29b",
+        "stroke": "#f0750f",
         "stroke-width": 1
       }
     }
@@ -67879,7 +67879,7 @@ const b70Ida = {
         "name": "Bus 70",
         "styleUrl": "#line-B2EBF2-1000-nodesc",
         "stroke-opacity": 1,
-        "stroke": "#b2ebf2",
+        "stroke": "#a98600",
         "stroke-width": 1
       }
     }
@@ -69916,7 +69916,7 @@ const b70Vuelta = {
         "name": "Bus 70 Vuelta",
         "styleUrl": "#line-A1C2FA-1000-nodesc",
         "stroke-opacity": 1,
-        "stroke": "#a1c2fa",
+        "stroke": "#a98600",
         "stroke-width": 1
       }
     }
@@ -71723,7 +71723,7 @@ const b71Ida = {
         "name": "Bus 71 Ida",
         "styleUrl": "#line-FBC02D-1000-nodesc",
         "stroke-opacity": 1,
-        "stroke": "#fbc02d",
+        "stroke": "#dab600",
         "stroke-width": 1
       }
     }
@@ -73945,7 +73945,7 @@ const b71Vuelta = {
         "name": "Bus 71 Vuelta",
         "styleUrl": "#line-FFEA00-1000-nodesc",
         "stroke-opacity": 1,
-        "stroke": "#ffea00",
+        "stroke": "#dab600",
         "stroke-width": 1
       }
     }
@@ -75982,7 +75982,7 @@ const b72Ida = {
         "name": "Bus 72 Ida",
         "styleUrl": "#line-0097A7-1000-nodesc",
         "stroke-opacity": 1,
-        "stroke": "#0097a7",
+        "stroke": "#e9d700",
         "stroke-width": 1
       }
     }
@@ -78264,7 +78264,7 @@ const b72Vuelta = {
         "name": "Bus 72 Vuelta",
         "styleUrl": "#line-A1C2FA-1000-nodesc",
         "stroke-opacity": 1,
-        "stroke": "#a1c2fa",
+        "stroke": "#e9d700",
         "stroke-width": 1
       }
     }
@@ -79496,7 +79496,7 @@ const b80Ida = {
         "name": "Bus 80 Ida",
         "styleUrl": "#line-C5E1A5-1000-nodesc",
         "stroke-opacity": 1,
-        "stroke": "#c5e1a5",
+        "stroke": "#f20b97",
         "stroke-width": 1
       }
     }
@@ -80763,7 +80763,7 @@ const b80Vuelta = {
         "name": "Bus 80 Vuelta",
         "styleUrl": "#line-0F9D58-1000-nodesc",
         "stroke-opacity": 1,
-        "stroke": "#0f9d58",
+        "stroke": "#f20b97",
         "stroke-width": 1
       }
     }
@@ -81985,7 +81985,7 @@ const b81Ida = {
         "name": "Bus 81 Ida",
         "styleUrl": "#line-CE93D8-1000-nodesc",
         "stroke-opacity": 1,
-        "stroke": "#ce93d8",
+        "stroke": "#f453ad",
         "stroke-width": 1
       }
     }
@@ -83337,7 +83337,7 @@ const b81Vuelta = {
         "name": "Bus 81 Vuelta",
         "styleUrl": "#line-9C27B0-1000-nodesc",
         "stroke-opacity": 1,
-        "stroke": "#9c27b0",
+        "stroke": "#f453ad",
         "stroke-width": 1
       }
     }
@@ -84534,7 +84534,7 @@ const b82Ida = {
         "name": "Bus 82 Ida",
         "styleUrl": "#line-A1C2FA-1000-nodesc",
         "stroke-opacity": 1,
-        "stroke": "#a1c2fa",
+        "stroke": "#ee73c4",
         "stroke-width": 1
       }
     }
@@ -86781,7 +86781,7 @@ const b82Vuelta = {
         "name": "Bus 82 Vuelta",
         "styleUrl": "#line-0097A7-1000-nodesc",
         "stroke-opacity": 1,
-        "stroke": "#0097a7",
+        "stroke": "#ee73c4",
         "stroke-width": 1
       }
     }
@@ -88008,7 +88008,7 @@ const b84Ida = {
         "name": "Bus 84 Ida",
         "styleUrl": "#line-BCAAA4-1000-nodesc",
         "stroke-opacity": 1,
-        "stroke": "#bcaaa4",
+        "stroke": "#f29ec8",
         "stroke-width": 1
       }
     }
@@ -89550,7 +89550,7 @@ const b84Vuelta = {
         "name": "Bus 84 Vuelta",
         "styleUrl": "#line-795548-1000-nodesc",
         "stroke-opacity": 1,
-        "stroke": "#795548",
+        "stroke": "#f29ec8",
         "stroke-width": 1
       }
     }
