@@ -144,7 +144,7 @@ table {
 
 body {
     min-height: 100vh;
-    background-color: rgba(245, 222, 179, 0.315);
+    background-color: rgba(18, 124, 23, 0.315);
     font-family: 'Roboto Mono', monospace;
 }
 
@@ -184,7 +184,7 @@ nav {
 /*  || SIDE NAV */
 
 .side-nav {
-    background-color: rgba(0, 0, 255, 0.5);
+    background-color: rgba(0, 0, 255, 0.8);
     color: whitesmoke;
     width: 12rem;
     height: auto;
@@ -193,18 +193,46 @@ nav {
     top: 85px;
     right: 25px;
     border-radius: 0px 5px 5px 5px;
+    transition: background-color 0.5s ease-in-out;
+}
+
+.container-title {
+    width: 90%;
+    height: 1.8rem;
+    margin-top: 4px;
+    padding: 3px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+
+.side-button {
+    background: none;
+    position: static;
+    border-style: inherit;
+    height: 1.5rem;
+    background-color: rgba(240, 248, 255, 0.219);
+    border-radius: 5px;
+    font-weight: 800;
+}
+
+
+button, .side-button:hover {
+    border: 1px solid rgba(255, 255, 255, 0.377);
 }
 
 .side-title {
-    min-width: 100%;
+    min-width: 4rem;
     height: 2rem;
-    text-align: center;
+    text-align: center; 
     border-radius: 0 5px 0 0;
-    background-color: rgba(8, 8, 133, 0.5);
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    box-sizing: border-box;
+    box-sizing: border-box; 
+    flex-flow: row nowrap;
 }
 
 .grid_bus {
@@ -227,7 +255,7 @@ nav {
     align-items: center;
 }
 
-.button {
+.button, #button {
     padding: 0;
     font-size: 1rem;
     background: none;
@@ -237,17 +265,60 @@ nav {
     cursor: pointer;
     width: 100%;
     height: 100%;
+    border-radius: 2px;
 }
 
-.button:active {
+button {
+    color: whitesmoke;
+}
+
+button:active {
  transform: scale(0.987);
 }
 
-button:hover {
+button:hover,
+#button:hover {
     border-bottom: 1px solid transparent;
     border-right: 1px solid transparent;
     border-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0) 60%, rgb(255, 255, 255)) 1;
 }
+
+.info-display {
+    background-color: rgba(0, 0, 255, 0.8);
+    color: #DDFFD9;
+    width: 12rem;
+    height: 150px;
+    position: absolute;
+    z-index: 1;
+    top: 270px;
+    border-radius: 5px 0 0 5px;
+    transition: background-color 0.5s ease-in-out;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: column wrap;
+}
+
+p, .display-line {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-weight: 300;
+    background-color: rgba(0, 255, 0, 0.7);
+    color: black;
+    width: auto;
+    border-radius: 5px;
+    padding: 3px;
+}
+
+/* .info-text {
+    margin: 5px 1px 1px 5px;
+} */
+
+h5 {
+    font-size: small;
+}
+
 
 /* ------ GRID COLUMNS ---------- */
 .b10 {
