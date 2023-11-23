@@ -96,6 +96,10 @@ video {
     vertical-align: baseline;
 }
 
+a {
+    font-style: none;
+}
+
 /* HTML5 display-role reset for older browsers */
 article,
 aside,
@@ -294,7 +298,7 @@ button:hover,
     border-radius: 5px 0 0 5px;
     transition: background-color 0.5s ease-in-out;
     display: flex;
-    justify-content: space-around;
+    /* justify-content: space-evenly; */
     align-items: center;
     flex-flow: column wrap;
 }
@@ -304,19 +308,25 @@ p, .display-line {
     text-align: center;
     justify-content: center;
     font-weight: 300;
-    background-color: rgba(0, 255, 0, 0.7);
+    background-color: rgba(255, 255, 255, 0.466);
     color: black;
     width: auto;
+    margin: 3px;
     border-radius: 5px;
     padding: 3px;
 }
 
-/* .info-text {
-    margin: 5px 1px 1px 5px;
-} */
-
-h5 {
+.info-text {
+    margin-top: 5px;
+}
+.info-display .info-link {
+    display: flex;
+    justify-self: flex-end;
+    position: inherit;
+    bottom: 5px;
     font-size: small;
+    color: #DDFFD9;
+
 }
 
 

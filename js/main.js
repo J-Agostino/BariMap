@@ -15,6 +15,7 @@ L.tileLayer('https://{s}.tile-cyclosm.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png',
 // Departure-return button
 let returnButton = document.querySelectorAll(".side-button");
 let onOffReturn = 0
+let displayLineText = document.querySelector(".display-line")
 for (const returnLine of returnButton) {
 	returnLine.addEventListener('click', function () {
 
@@ -30,8 +31,10 @@ for (const returnLine of returnButton) {
 			}
 		}
 		let changeBackground = document.querySelectorAll(".side-nav, .info-display");
+		displayLineText.style.fontWeight = "200"
 		if (onOffReturn === 0) {
 			returnLine.textContent = "Vuelta";
+			displayLineText.textContent = "Buses vuelta"
 			onOffReturn++;
 			for (const element of changeBackground) {
 				element.style.background = "rgba(255, 0, 0, 0.8)";
@@ -39,6 +42,8 @@ for (const returnLine of returnButton) {
 			}
 		} else {
 			returnLine.textContent = "Ida";
+			displayLineText.textContent = "Buses ida"
+
 			for (const element of changeBackground) {
 				element.style.background = "rgba(0, 0, 255, 0.8)";
 				element.offsetHeight; // Trigger animation for each element
@@ -60,6 +65,9 @@ for (const button of buttons) {
 		let departure = trayectory[0];
 		let returnLine = trayectory[1];
 		let newDisplayLine
+		const selectedButtonName = button.textContent;
+		let displayLineText = document.querySelector(".display-line");
+
 		if (onOffReturn === 1) {
 			newDisplayLine = L.geoJSON(individualLines[returnLine], {
 				style: function (feature) {
@@ -84,8 +92,6 @@ for (const button of buttons) {
 			});
 		}
 
-
-
 		// Update active lines based on the clicked button
 		if (this.id.endsWith(' off')) {
 			const newId = this.id.replace(' off', ' on');
@@ -107,16 +113,19 @@ for (const button of buttons) {
 
 			displayLine = newDisplayLine;
 			displayLine.addTo(map);
+			displayLineText.style.fontWeight = "400"
+			displayLineText.textContent = `Bus ${selectedButtonName}`;
+
+
 		} else if (this.id.endsWith(' on')) {
 			const newId = this.id.replace(' on', ' off');
 			button.id = newId;
-
 			// Clear the currently active button ID
 			whoIsOn = null;
-
 			displayLine.remove();
 			displayLine = null; // Clear reference to the removed line
+			displayLineText.style.fontWeight = "200"
+			displayLineText.textContent = "Ninguno";
 		}
 	});
 }
-
