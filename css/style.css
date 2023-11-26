@@ -176,9 +176,8 @@ nav {
 #map {
     margin: 25px;
     padding: 25px;
-    min-height: 70vh;
+    height: 70vh;
     width: 95vw;
-    /* background-color: red; */
     border-radius: 5px;
     z-index: 0;
 }
@@ -442,3 +441,31 @@ p, .display-line {
     grid-row: 8;
 }
 /* ------ GRID COLUMNS END------- */
+
+/* ------ RESPONSIVE ------- */
+
+@media only screen and (max-width: 600px) {
+    body {
+        background-color: aquamarine;
+        height: 200vh;
+    }
+    nav, .title {
+        position: sticky;
+        height: 100px;
+        display: flex;
+    }
+    .map__container {
+    background-color: rgba(0, 0, 255, 0.048);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+    #map {
+    height: 50vh; 
+    margin: 5px;
+    }
+    .side-nav {
+        position: inherit;
+    }
+}
