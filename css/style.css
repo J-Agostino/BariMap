@@ -482,7 +482,6 @@ p, .display-line {
     margin: 5px;
     }
     .side-nav-container {
-        border: 1px solid red;
         width: auto;
         display: flex;
         position: inherit;
@@ -494,6 +493,7 @@ p, .display-line {
     .side-nav {
         width: auto;
         margin-bottom: 0;
+        border-radius: 5px;
     }
     .container-title {
         height: 3rem;
@@ -505,5 +505,7 @@ p, .display-line {
         border: 1px solid white;
         padding: 4px;
         font-size: small;
+        border-radius: 5px;
+        text-align: center;
     }
 }
