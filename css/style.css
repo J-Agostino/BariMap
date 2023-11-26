@@ -489,6 +489,7 @@ p, .display-line {
         margin: 0 auto;
         display: flex;
         flex-flow: column-reverse nowrap;
+        margin: 5px;
     }
     .side-nav {
         width: auto;
@@ -507,5 +508,40 @@ p, .display-line {
         font-size: small;
         border-radius: 5px;
         text-align: center;
+    }
+}
+
+
+
+@media only screen and (max-height: 600px) {
+    body {
+        background-color: darkslategrey;
+    }
+    .side-nav-container {
+        width: 80vw;
+        display: flex;
+        justify-content: flex-end;
+        flex-flow: column-reverse nowrap;
+    }
+    .side-nav {
+        width: 12rem;
+        align-self: flex-end;
+    }
+    .info-display {
+        /* position: inherit; */
+        /* left: 4px; */
+        flex-flow: row wrap;
+        width: auto;
+        height: 30px;
+        /* padding: 4px; */
+        font-size: small;
+        border-radius: 5px;
+        text-align: center;
+        padding: 4px;
+    }
+    .info-display .info-link {
+        position: relative;
+        bottom: 0;
+
     }
 }
