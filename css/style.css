@@ -518,26 +518,27 @@ p, .display-line {
         background-color: darkslategrey;
     }
     .side-nav-container {
-        width: 80vw;
+        /* width: 80vw; */
         display: flex;
         justify-content: flex-end;
-        flex-flow: column-reverse nowrap;
+        flex-flow: column nowrap;
     }
     .side-nav {
         width: 12rem;
         align-self: flex-end;
     }
     .info-display {
-        /* position: inherit; */
-        /* left: 4px; */
+        position: absolute;
+        left: -70vw;
+        top: 70vh;
         flex-flow: row wrap;
         width: auto;
         height: 30px;
-        /* padding: 4px; */
         font-size: small;
         border-radius: 5px;
         text-align: center;
         padding: 4px;
+        margin: 0 auto;
     }
     .info-display .info-link {
         position: relative;
