@@ -451,8 +451,10 @@ p, .display-line {
     }
     nav, .title {
         position: sticky;
-        height: 100px;
+        height: 70px;
         display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .map__container {
     background-color: rgba(0, 0, 255, 0.048);
