@@ -142,13 +142,30 @@ table {
     border-spacing: 0;
 }
 
-
-
+/* VARIABLES */
+:root {
+    --TEXT: #26220d;
+    --BACKGROUND: #faf8f0;
+    --PRIMARY: #b3d175;
+    --SECONDARY: #bee7b6;
+    --ACCENT: #469d34;
+    --SIDE-TEXT: #e1ebd1;
+    --BT-HOVER: rgba(255, 255, 255, 0.24)
+}
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --TEXT: #f2eed9;
+    --BACKGROUND: #0f0d05;
+    --PRIMARY: #6b8a2e;
+    --SECONDARY: #204918;
+    --ACCENT: #74cb62;
+  }
+} */
 /* My code */
 
 body {
     min-height: 100vh;
-    background-color: rgba(18, 124, 23, 0.315);
+    background-color: var(--BACKGROUND);
     font-family: 'Roboto Mono', monospace;
 }
 
@@ -158,10 +175,10 @@ nav {
     font-size: 3rem;
     font-family: 'Roboto Mono', monospace;
     font-weight: 200;
-    color: whitesmoke;
+    color: #fff;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.301);
-    text-shadow: 1px 1px 2px rgb(0, 0, 0);
+    background-color: var(--SECONDARY);
+    text-shadow: 1px 1px 2px var(--TEXT);
 }
 
 .map__container {
@@ -187,7 +204,7 @@ nav {
 /*  || SIDE NAV */
 
 .side-nav-container {
-    color: whitesmoke;
+    color: var(--SIDE-TEXT);
     width: 12rem;
     height: auto;
     position: absolute;
@@ -239,11 +256,10 @@ nav {
     grid-template-rows: repeat(8, 1fr);
     grid-template-columns: repeat(4, 25%);
     padding: 5px;
-    border-bottom-left-radius: 5px;
+    /* border-bottom-left-radius: 5px; */
 }
 
 .n_bus {
-    border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -255,26 +271,30 @@ nav {
     background: none;
     border: none;
     font-family: 'Roboto Mono', monospace;
-    color: whitesmoke;
+    color: var(--SIDE-TEXT);
     cursor: pointer;
     width: 100%;
     height: 100%;
-    border-radius: 2px;
 }
 
 button {
-    color: whitesmoke;
+    color: var(--SIDE-TEXT);
 }
 
 button:active {
  transform: scale(0.987);
 }
 
-button:hover,
-#button:hover {
+
+#button:hover,
+#button:focus-visible,
+.button:focus-visible,
+.button:hover {
+    background-color: var(--BT-HOVER);
+    border-radius: 5px;
     border-bottom: 1px solid transparent;
     border-right: 1px solid transparent;
-    border-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0) 60%, rgb(255, 255, 255)) 1;
+    /* border-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0) 60%, rgb(255, 255, 255)) 1; */
 }
 
 .side-button {
@@ -448,7 +468,7 @@ p, .display-line {
 
 @media only screen and (max-width: 600px) {
     body {
-        background-color: aquamarine;
+        /* background-color: aquamarine; */
         height: 150vh;
     }
     nav, .title {
@@ -457,11 +477,6 @@ p, .display-line {
         display: flex;
         justify-content: center;
         align-items: center;
-    }
-    .map__container {
-    background-color: rgba(0, 0, 255, 0.048);
-    max-width: 100vw;
-    position: inherit;
     }
     #map {
     height: 50vh; 
@@ -499,9 +514,6 @@ p, .display-line {
 
 
 @media only screen and (max-height: 600px) {
-    body {
-        background-color: darkslategrey;
-    }
         .map__container {
     background-color: rgba(0, 0, 255, 0.048);
     max-width: 100vw;
