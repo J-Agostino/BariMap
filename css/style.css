@@ -149,6 +149,7 @@ table {
     --PRIMARY: #b3d175;
     --SECONDARY: #bee7b6;
     --ACCENT: #469d34;
+    --ACCENT-RETURN: #9d3460;
     --SIDE-TEXT: #e1ebd1;
     --BT-HOVER: rgba(255, 255, 255, 0.24)
 }
@@ -216,7 +217,8 @@ nav {
 }
 
 .side-nav {
-    background-color: rgba(0, 0, 255, 0.8);
+    background-color: var(--ACCENT);
+    opacity: 0.85;
     z-index: 1;
     transition: background-color 0.5s ease-in-out;
     margin-bottom: 5px;
@@ -313,7 +315,8 @@ button, .side-button:hover {
 }
 
 .info-display {
-    background-color: rgba(0, 0, 255, 0.8);
+    background-color: var(--ACCENT);
+    opacity: 0.85;
     color: #DDFFD9;
     width: 12rem;
     height: 150px;

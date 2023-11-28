@@ -37,7 +37,7 @@ for (const returnLine of returnButton) {
 			displayLineText.textContent = "Buses vuelta"
 			onOffReturn++;
 			for (const element of changeBackground) {
-				element.style.background = "rgba(255, 0, 0, 0.8)";
+				element.style.background = "var(--ACCENT-RETURN)";
 				element.offsetHeight; // Trigger animation for each element
 			}
 		} else {
@@ -45,7 +45,7 @@ for (const returnLine of returnButton) {
 			displayLineText.textContent = "Buses ida"
 
 			for (const element of changeBackground) {
-				element.style.background = "rgba(0, 0, 255, 0.8)";
+				element.style.background = "var(--ACCENT)";
 				element.offsetHeight; // Trigger animation for each element
 			}
 			onOffReturn--;
