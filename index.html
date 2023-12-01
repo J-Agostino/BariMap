@@ -13,7 +13,7 @@
 
     <link rel="stylesheet" href="css/style.css">
     <script type="module" src="js/main.js"></script>
-    <title>My LeafLet Map</title>
+    <title>BariMap</title>
 </head>
 
 <body>
@@ -24,60 +24,59 @@
     </header>
 
     <div class="map__container">
-        <div id="map">Barimap</div>
+        <div id="map"></div>
     </div>
 
-    <div class="side-nav">
-        <h3 class="side-title">L&iacute;neas</h3>
-        <div class="grid_bus">
-            <div class="n_bus button b10"><button class="button"> 10</button></div>
-            <div class="n_bus button b13"><button class="button"> 13</button></div>
-            <div class="n_bus button b20"><button class="button"> 20</button></div>
-            <div class="n_bus button b21"><button class="button"> 21</button></div>
-            <div class="n_bus button b22"><button class="button"> 22</button></div>
-            <div class="n_bus button b30"><button class="button"> 30</button></div>
-            <div class="n_bus button b31"><button class="button"> 31</button></div>
-            <div class="n_bus button b40"><button class="button"> 40</button></div>
-            <div class="n_bus button b41"><button class="button"> 41</button></div>
-            <div class="n_bus button b50"><button class="button"> 50</button></div>
-            <div class="n_bus button b51"><button class="button"> 51</button></div>
-            <div class="n_bus button b55"><button class="button"> 55</button></div>
-            <div class="n_bus button b55b"><button class="button"> 55B</button></div>
-            <div class="n_bus button b60"><button class="button"> 60</button></div>
-            <div class="n_bus button b61"><button class="button"> 61</button></div>
-            <div class="n_bus button b70"><button class="button"> 70</button></div>
-            <div class="n_bus button b71"><button class="button"> 71</button></div>
-            <div class="n_bus button b72"><button class="button"> 72</button></div>
-            <div class="n_bus button b80"><button class="button"> 80</button></div>
-            <div class="n_bus button b81"><button class="button"> 81</button></div>
-            <div class="n_bus button b82"><button class="button"> 82</button></div>
-            <div class="n_bus button b84"><button class="button"> 84</button></div>
-            <!-- <ul>   class="list_bus" 
-                <li class="n_bus b10">10</li>
-                <li class="n_bus b13">13</li>
-                <li class="n_bus b20">20</li>
-                <li class="n_bus b21">21</li>
-                <li class="n_bus b22">22</li>
-                <li class="n_bus b30">30</li>
-                <li class="n_bus b31">31</li>
-                <li class="n_bus b40">40</li>
-                <li class="n_bus b41">41</li>
-                <li class="n_bus b50">50</li>
-                <li class="n_bus b51">51</li>
-                <li class="n_bus b55">55</li>
-                <li class="n_bus b55b">55B</li>
-                <li class="n_bus b60">60</li>
-                <li class="n_bus b61">61</li>
-                <li class="n_bus b70">70</li>
-                <li class="n_bus b71">71</li>
-                <li class="n_bus b72">72</li>
-                <li class="n_bus b80">80</li>
-                <li class="n_bus b82">82</li>
-                <li class="n_bus b84">84</li>
-            </ul> -->
+    <div class="side-nav-container">
+        <div class="side-nav">
+            <section class="container-title">
+                <h3 class="side-title">L&iacute;neas</h3>
+                <button class="side-button">Ida</button>
+            </section>
+            <div class="grid_bus">
+                <div class="n_bus button-div b10"><button class="button" id="b10 b10 off"> 10</button></div>
+                <div class="n_bus button-div b13"><button class="button" id="b13 b13 off"> 13</button></div>
+                <div class="n_bus button-div b20"><button class="button" id="b20 b20 off"> 20</button></div>
+                <div class="n_bus button-div b21"><button class="button" id="b21 b21 off"> 21</button></div>
+                <div class="n_bus button-div b22"><button class="button" id="b22Ida b22Vuelta off"> 22</button></div>
+                <div class="n_bus button-div b30"><button class="button" id="b30Ida b30Vuelta off"> 30</button></div>
+                <div class="n_bus button-div b31"><button class="button" id="b31Ida b31Vuelta off"> 31</button></div>
+                <div class="n_bus button-div b40"><button class="button" id="b40Ida b40Vuelta off"> 40</button></div>
+                <div class="n_bus button-div b41"><button class="button" id="b41Ida b41Vuelta off"> 41</button></div>
+                <div class="n_bus button-div b50"><button class="button" id="b50Ida b50Vuelta off"> 50</button></div>
+                <div class="n_bus button-div b51"><button class="button" id="b51Ida b51Vuelta off"> 51</button></div>
+                <div class="n_bus button-div b55"><button class="button" id="b55Ida b55Vuelta off"> 55</button></div>
+                <div class="n_bus button-div b55b"><button class="button" id="b55bIda b55bVuelta off"> 55B</button>
+                </div>
+                <div class="n_bus button-div b60"><button class="button" id="b60Ida b60Vuelta off"> 60</button></div>
+                <div class="n_bus button-div b61"><button class="button" id="b61Ida b61Vuelta off"> 61</button></div>
+                <div class="n_bus button-div b70"><button class="button" id="b70Ida b70Vuelta off"> 70</button></div>
+                <div class="n_bus button-div b71"><button class="button" id="b71Ida b71Vuelta off"> 71</button></div>
+                <div class="n_bus button-div b72"><button class="button" id="b72Ida b72Vuelta off"> 72</button></div>
+                <div class="n_bus button-div b80"><button class="button" id="b80Ida b80Vuelta off"> 80</button></div>
+                <div class="n_bus button-div b81"><button class="button" id="b81Ida b81Vuelta off"> 81</button></div>
+                <div class="n_bus button-div b82"><button class="button" id="b82Ida b82Vuelta off"> 82</button></div>
+                <div class="n_bus button-div b84"><button class="button" id="b84Ida b84Vuelta off"> 84</button></div>
+
+
+            </div>
+        </div>
+        <div class="info-display">
+            <h4 class="info-text title-display">Mostrando: </h4>
+            <p class="info-text display-line">Buses ida</p>
+
+            <h4 class="info-text title-display">Frecuencia aprox:</h4>
+            <p class="info-text display-line">-- minutos</p>
+            <a href="#horarios" class="info-text info-link">M&aacute;s info horaria</a>
         </div>
     </div>
 
+    <div class="horarios" >
+        <div class="horarios-text">
+            <img class="horarios-image" id="horarios" src="/pdf-horarios/20-LV.png" alt="">
+        </div>
+    </div> 
 </body>
+<footer><div class="version">V-1.0</div></footer>
 
 </html>
