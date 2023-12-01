@@ -163,6 +163,7 @@ table {
   }
 } */
 /* My code */
+html {scroll-behavior: smooth;}
 
 body {
     min-height: 100vh;
@@ -171,7 +172,7 @@ body {
 }
 
 nav {
-    width: 100vw;
+    /* width: 100vw; */
     height: 60px;
     font-size: 3rem;
     font-family: 'Roboto Mono', monospace;
@@ -466,6 +467,57 @@ p, .display-line {
     grid-row: 8;
 }
 /* ------ GRID COLUMNS END------- */
+
+/* HORARIOS */
+.horarios {
+    height: 500px;
+    background-color: var(--ACCENT);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+}
+
+.horarios-text {
+    background-color: var(--PRIMARY);
+    flex: 1;
+    height: 100%;
+    border-radius: 5px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.horarios-image {
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+.horarios-text::-webkit-scrollbar {
+  width: 10px; /* Set the scrollbar width */
+  background-color: transparent; /* Set the scrollbar background color */
+}
+.horarios-text::-webkit-scrollbar-thumb {
+  background-color: var(--TEXT); /* Set the scrollbar thumb color */
+  border-radius: 6px; /* Set the scrollbar thumb border radius */
+}
+/* END HORARIOS */
+
+/* FOOTER */
+footer {
+    background-color: var(--SECONDARY);
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.version {
+    font-size: 12px;
+    color: var(--TEXT);
+    
+}
 
 /* ------ RESPONSIVE ------- */
 
