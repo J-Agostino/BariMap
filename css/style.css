@@ -178,9 +178,31 @@ nav {
     font-family: 'Roboto Mono', monospace;
     font-weight: 200;
     color: #fff;
-    text-align: center;
+    /* text-align: center; */
     background-color: var(--SECONDARY);
     text-shadow: 1px 1px 2px var(--TEXT);
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.nav-container, .a-nav {
+    align-items: baseline;
+}
+
+.a-nav {
+    font-size: 1.5rem;
+    /* background-color: rgba(0, 0, 0, 0.07); */
+    /* border: #26220d 0.5px solid; */
+    height: 40px;
+    width: 9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
 }
 
 .map__container {
@@ -330,7 +352,7 @@ button, .side-button:hover {
     flex-flow: column wrap;
 }
 
-p, .display-line {
+.display-line {
     display: flex;
     text-align: center;
     justify-content: center;
@@ -470,7 +492,7 @@ p, .display-line {
 
 /* HORARIOS */
 .horarios {
-    height: 500px;
+    height: 700px;
     background-color: var(--ACCENT);
     display: flex;
     justify-content: center;
@@ -478,7 +500,7 @@ p, .display-line {
     padding: 25px;
 }
 
-.horarios-text {
+.horarios-img-container {
     background-color: var(--PRIMARY);
     flex: 1;
     height: 100%;
@@ -491,15 +513,16 @@ p, .display-line {
 }
 
 .horarios-image {
-    width: 100%;
+    width: 80%;
     object-fit: cover;
     object-position: top;
+    /* background-image: radial-gradient(circle, var(--BACKGROUND)40%, var(--PRIMARY)) */
 }
-.horarios-text::-webkit-scrollbar {
+.horarios-img-container::-webkit-scrollbar {
   width: 10px; /* Set the scrollbar width */
   background-color: transparent; /* Set the scrollbar background color */
 }
-.horarios-text::-webkit-scrollbar-thumb {
+.horarios-img-container::-webkit-scrollbar-thumb {
   background-color: var(--TEXT); /* Set the scrollbar thumb color */
   border-radius: 6px; /* Set the scrollbar thumb border radius */
 }
