@@ -544,7 +544,7 @@ footer {
 }
 
 /* ------ RESPONSIVE ------- */
-
+/* Vertical phone */
 @media only screen and (max-width: 600px) {
     body {
         /* background-color: aquamarine; */
@@ -588,6 +588,15 @@ footer {
         font-size: small;
         border-radius: 5px;
         text-align: center;
+    }
+    .horarios {
+        height: auto;
+    }
+    .horarios-img-container{
+        max-height: 500px;
+    }
+    .horarios-image{
+        width: 100%;
     }
 }
 
