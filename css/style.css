@@ -591,6 +591,7 @@ footer {
     }
     .horarios {
         height: auto;
+        padding: 5px;
     }
     .horarios-img-container{
         max-height: 500px;
