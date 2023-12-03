@@ -506,14 +506,15 @@ button, .side-button:hover {
     height: 100%;
     border-radius: 5px;
     display: flex;
-    align-items: flex-start;
-    justify-content: center;
+    align-items: center;
+    justify-content: flex-start;
+    flex-flow: column nowrap;
     overflow: scroll;
     overflow-x: hidden;
 }
 
 .horarios-image {
-    width: 80%;
+    max-width: 1200px;
     object-fit: cover;
     object-position: top;
     /* background-image: radial-gradient(circle, var(--BACKGROUND)40%, var(--PRIMARY)) */

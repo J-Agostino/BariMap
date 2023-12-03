@@ -54,6 +54,38 @@ for (const returnLine of returnButton) {
 	})
 }
 
+// Schedule images
+const horarios = {
+	b10: {week: "imgs-horarios/10-LV.png"}, 
+	b13: {week: "change me1", weekend: "change me too"}, 
+	b20: {week: "imgs-horarios/20-LV.png", weekend: "change me too"}, 
+	b21: {week: "change me3", weekend: "change me too"}, 
+	b22Ida: {week: "change 4me", weekend: "change me too"},
+	b30Ida: {week: "change me", weekend: "change me too"},
+	b31Ida: {week: "change me", weekend: "change me too"},
+	b40Ida: {week: "change me", weekend: "change me too"},
+	b41Ida: {week: "change me", weekend: "change me too"},
+	b50Ida: {week: "change me", weekend: "change me too"},
+	b51Ida: {week: "change me", weekend: "change me too"},
+	b55Ida: {week: "change me", weekend: "change me too"},
+   b55bIda: {week: "change me", weekend: "change me too"}, 
+	b60Ida: {week: "change me", weekend: "change me too"},
+	b61Ida: {week: "change me", weekend: "change me too"},
+	b70Ida: {week: "change me", weekend: "change me too"},
+	b71Ida: {week: "imgs-horarios/71-81-HABIL.png", weekend: "change me too"},
+	b72Ida: {week: "change me", weekend: "change me too"},
+	b80Ida: {week: "change me", weekend: "change me too"},
+	b81Ida: {week: "imgs-horarios/71-81-HABIL.png", weekend: "change me too"},
+	b82Ida: {week: "change me", weekend: "change me too"},
+	b84Ida: {week: "change me", weekend: "change me too"},
+}
+
+
+
+
+
+
+
 
 // Button stuff
 let displayLine;
@@ -62,11 +94,14 @@ let buttons = document.querySelectorAll(".button");
 for (const button of buttons) {
 	button.addEventListener('click', function () {
 		let trayectory = this.id.split(' ');
-		let departure = trayectory[0];
+		let departure = trayectory[0]; // I'm using this to display the schedule(horarios)
 		let returnLine = trayectory[1];
+		// console.log(departure);
 		let newDisplayLine
 		const selectedButtonName = button.textContent;
 		let displayLineText = document.querySelector(".display-line");
+
+		const image = document.getElementById('horarios');
 
 		if (onOffReturn === 1) {
 			newDisplayLine = L.geoJSON(individualLines[returnLine], {
@@ -92,11 +127,11 @@ for (const button of buttons) {
 			});
 		}
 
-		// Update active lines based on the clicked button
+	// Update active lines based on the clicked button :
 		if (this.id.endsWith(' off')) {
 			const newId = this.id.replace(' off', ' on');
 			button.id = newId;
-
+			const showThisHorario = horarios[departure]["week"] //Returns the content, the string that goes into src=""
 			// Toggle the previously active button's state if there is one
 			if (whoIsOn !== null) {
 				const previousButtonId = whoIsOn;
@@ -116,7 +151,10 @@ for (const button of buttons) {
 			displayLineText.style.fontWeight = "400"
 			displayLineText.textContent = `Bus ${selectedButtonName}`;
 
+			console.log(showThisHorario);
+			image.src = showThisHorario
 
+		// When there's no line selected :
 		} else if (this.id.endsWith(' on')) {
 			const newId = this.id.replace(' on', ' off');
 			button.id = newId;
