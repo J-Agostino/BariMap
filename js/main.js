@@ -57,29 +57,41 @@ for (const returnLine of returnButton) {
 // Schedule images
 const horarios = {
 	b10: {week: "imgs-horarios/10-LV.png"}, 
-	b13: {week: "change me1", weekend: "change me too"}, 
-	b20: {week: "imgs-horarios/20-LV.png", weekend: "change me too"}, 
-	b21: {week: "change me3", weekend: "change me too"}, 
-	b22Ida: {week: "change 4me", weekend: "change me too"},
-	b30Ida: {week: "change me", weekend: "change me too"},
-	b31Ida: {week: "change me", weekend: "change me too"},
-	b40Ida: {week: "change me", weekend: "change me too"},
-	b41Ida: {week: "change me", weekend: "change me too"},
-	b50Ida: {week: "change me", weekend: "change me too"},
-	b51Ida: {week: "change me", weekend: "change me too"},
-	b55Ida: {week: "change me", weekend: "change me too"},
-   b55bIda: {week: "change me", weekend: "change me too"}, 
-	b60Ida: {week: "change me", weekend: "change me too"},
-	b61Ida: {week: "change me", weekend: "change me too"},
-	b70Ida: {week: "change me", weekend: "change me too"},
-	b71Ida: {week: "imgs-horarios/71-81-HABIL.png", weekend: "change me too"},
-	b72Ida: {week: "change me", weekend: "change me too"},
-	b80Ida: {week: "change me", weekend: "change me too"},
-	b81Ida: {week: "imgs-horarios/71-81-HABIL.png", weekend: "change me too"},
-	b82Ida: {week: "change me", weekend: "change me too"},
-	b84Ida: {week: "change me", weekend: "change me too"},
+	b13: {week: "imgs-horarios/13-22-IDK.png"}, 
+	b20: {week: "imgs-horarios/20-LV.png"}, 
+	b21: {week: "imgs-horarios/21-LV.png"}, 
+	b22Ida: {week: "imgs-horarios/13-22IDK.png", weekend: "imgs-horarios/.png"},
+	b30Ida: {week: "imgs-horarios/30-LS.png", weekend: "imgs-horarios/.png"},
+	b31Ida: {week: "imgs-horarios/31-.png", weekend: "imgs-horarios/.png"},
+	b40Ida: {week: "imgs-horarios/.png", weekend: "imgs-horarios/.png"},
+	b41Ida: {week: "imgs-horarios/.png", weekend: "imgs-horarios/.png"},
+	b50Ida: {week: "imgs-horarios/.png", weekend: "imgs-horarios/.png"},
+	b51Ida: {week: "imgs-horarios/.png", weekend: "imgs-horarios/.png"},
+	b55Ida: {week: "imgs-horarios/.png", weekend: "imgs-horarios/.png"},
+   b55bIda: {week: "imgs-horarios/.png", weekend: "imgs-horarios/.png"}, 
+	b60Ida: {week: "imgs-horarios/.png", weekend: "imgs-horarios/.png"},
+	b61Ida: {week: "imgs-horarios/.png", weekend: "imgs-horarios/.png"},
+	b70Ida: {week: "imgs-horarios/.png", weekend: "imgs-horarios/.png"},
+	b71Ida: {week: "imgs-horarios/71-81-HABIL.png", weekend: "imgs-horarios/"},
+	b72Ida: {week: "imgs-horarios/.png", weekend: "imgs-horarios/.png"},
+	b80Ida: {week: "imgs-horarios/.png", weekend: "imgs-horarios/.png"},
+	b81Ida: {week: "imgs-horarios/71-81-HABIL.png", weekend: "imgs-horarios/"},
+	b82Ida: {week: "imgs-horarios/.png", weekend: "imgs-horarios/.png"},
+	b84Ida: {week: "imgs-horarios/.png", weekend: "imgs-horarios/.png"},
 }
 
+fetch('./servicios.html')
+  .then(response => response.text())
+  .then(htmlContent => {
+    const parser = new DOMParser();
+    const tableDocument = parser.parseFromString(htmlContent, 'text/html');
+    const tableElement = tableDocument.querySelector('table');
+
+    const targetLocation = document.querySelector('#horarios');
+    const clonedTableElement = tableElement.cloneNode(true);
+
+    targetLocation.appendChild(clonedTableElement);
+  });
 
 
 
