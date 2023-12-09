@@ -16,9 +16,9 @@ L.tileLayer('https://{s}.tile-cyclosm.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png',
 let returnButton = document.querySelectorAll(".side-button");
 let onOffReturn = 0
 let displayLineText = document.querySelector(".display-line")
+
 for (const returnLine of returnButton) {
 	returnLine.addEventListener('click', function () {
-
 
 		if (displayLine) {
 			displayLine.remove(); // Remove the existing line before adding the new one
@@ -32,66 +32,136 @@ for (const returnLine of returnButton) {
 		}
 		let changeBackground = document.querySelectorAll(".side-nav, .info-display");
 		displayLineText.style.fontWeight = "200"
-		if (onOffReturn === 0) {
-			returnLine.textContent = "Vuelta";
-			displayLineText.textContent = "Buses vuelta"
-			onOffReturn++;
-			for (const element of changeBackground) {
-				element.style.background = "var(--ACCENT-RETURN)";
-				element.offsetHeight; // Trigger animation for each element
-			}
-		} else {
-			returnLine.textContent = "Ida";
+
+		// Toggle ida-vuelta button
+		const mySelector = returnLine.textContent // Tells the content of the element
+		if (mySelector === "Ida") {
+			returnLine.style.background = "rgba(240, 248, 255, 0.219)"
+			returnButton[1].style.background = "rgba(240, 248, 255, 0)";
+			// Change the background color nav
 			displayLineText.textContent = "Buses ida"
 
-			for (const element of changeBackground) {
-				element.style.background = "var(--ACCENT)";
-				element.offsetHeight; // Trigger animation for each element
+			for (const sNavContainer of changeBackground) {
+				sNavContainer.style.background = "var(--ACCENT)";
+				// sNavContainer.offsetHeight; // Trigger animation for each sNavContainer
 			}
 			onOffReturn--;
-		}
 
+		} else {
+			returnLine.style.background = "rgba(240, 248, 255, 0.219)"
+			returnButton[0].style.background = "rgba(240, 248, 255, 0)";
+			// Change the background color nav
+			displayLineText.textContent = "Buses vuelta"
+			for (const sNavContainer of changeBackground) {
+				sNavContainer.style.background = "var(--ACCENT-RETURN)";
+				// sNavContainer.offsetHeight; // Trigger animation for each sNavContainer
+			}
+			onOffReturn++;
+
+		}
 	})
 }
 
 // Schedule images
 const horarios = {
-	b10: {week: "imgs-horarios/10-LV.png"}, 
-	b13: {week: "imgs-horarios/13-22-IDK.png"}, 
-	b20: {week: "imgs-horarios/20-LV.png"}, 
-	b21: {week: "imgs-horarios/21-LV.png"}, 
-	b22Ida: {week: "imgs-horarios/13-22IDK.png", weekend: "imgs-horarios/.png"},
-	b30Ida: {week: "imgs-horarios/30-LS.png", weekend: "imgs-horarios/.png"},
-	b31Ida: {week: "imgs-horarios/31-.png", weekend: "imgs-horarios/.png"},
-	b40Ida: {week: "imgs-horarios/.png", weekend: "imgs-horarios/.png"},
-	b41Ida: {week: "imgs-horarios/.png", weekend: "imgs-horarios/.png"},
-	b50Ida: {week: "imgs-horarios/.png", weekend: "imgs-horarios/.png"},
-	b51Ida: {week: "imgs-horarios/.png", weekend: "imgs-horarios/.png"},
-	b55Ida: {week: "imgs-horarios/.png", weekend: "imgs-horarios/.png"},
-   b55bIda: {week: "imgs-horarios/.png", weekend: "imgs-horarios/.png"}, 
-	b60Ida: {week: "imgs-horarios/.png", weekend: "imgs-horarios/.png"},
-	b61Ida: {week: "imgs-horarios/.png", weekend: "imgs-horarios/.png"},
-	b70Ida: {week: "imgs-horarios/.png", weekend: "imgs-horarios/.png"},
-	b71Ida: {week: "imgs-horarios/71-81-HABIL.png", weekend: "imgs-horarios/"},
-	b72Ida: {week: "imgs-horarios/.png", weekend: "imgs-horarios/.png"},
-	b80Ida: {week: "imgs-horarios/.png", weekend: "imgs-horarios/.png"},
-	b81Ida: {week: "imgs-horarios/71-81-HABIL.png", weekend: "imgs-horarios/"},
-	b82Ida: {week: "imgs-horarios/.png", weekend: "imgs-horarios/.png"},
-	b84Ida: {week: "imgs-horarios/.png", weekend: "imgs-horarios/.png"},
+	b10: {
+		week: "imgs-horarios/10-LV.png"
+	},
+	b13: {
+		week: "imgs-horarios/13-22-IDK.png"
+	},
+	b20: {
+		week: "imgs-horarios/20-LV.png"
+	},
+	b21: {
+		week: "imgs-horarios/21-LV.png"
+	},
+	b22Ida: {
+		week: "imgs-horarios/13-22IDK.png",
+		weekend: "imgs-horarios/.png"
+	},
+	b30Ida: {
+		week: "imgs-horarios/30-LS.png",
+		weekend: "imgs-horarios/.png"
+	},
+	b31Ida: {
+		week: "imgs-horarios/31-.png",
+		weekend: "imgs-horarios/.png"
+	},
+	b40Ida: {
+		week: "imgs-horarios/.png",
+		weekend: "imgs-horarios/.png"
+	},
+	b41Ida: {
+		week: "imgs-horarios/.png",
+		weekend: "imgs-horarios/.png"
+	},
+	b50Ida: {
+		week: "imgs-horarios/.png",
+		weekend: "imgs-horarios/.png"
+	},
+	b51Ida: {
+		week: "imgs-horarios/.png",
+		weekend: "imgs-horarios/.png"
+	},
+	b55Ida: {
+		week: "imgs-horarios/.png",
+		weekend: "imgs-horarios/.png"
+	},
+	b55bIda: {
+		week: "imgs-horarios/.png",
+		weekend: "imgs-horarios/.png"
+	},
+	b60Ida: {
+		week: "imgs-horarios/.png",
+		weekend: "imgs-horarios/.png"
+	},
+	b61Ida: {
+		week: "imgs-horarios/.png",
+		weekend: "imgs-horarios/.png"
+	},
+	b70Ida: {
+		week: "imgs-horarios/.png",
+		weekend: "imgs-horarios/.png"
+	},
+	b71Ida: {
+		week: "imgs-horarios/71-81-HABIL.png",
+		weekend: "imgs-horarios/"
+	},
+	b72Ida: {
+		week: "imgs-horarios/.png",
+		weekend: "imgs-horarios/.png"
+	},
+	b80Ida: {
+		week: "imgs-horarios/.png",
+		weekend: "imgs-horarios/.png"
+	},
+	b81Ida: {
+		week: "imgs-horarios/71-81-HABIL.png",
+		weekend: "imgs-horarios/"
+	},
+	b82Ida: {
+		week: "imgs-horarios/.png",
+		weekend: "imgs-horarios/.png"
+	},
+	b84Ida: {
+		week: "imgs-horarios/.png",
+		weekend: "imgs-horarios/.png"
+	},
 }
 
 fetch('./servicios.html')
-  .then(response => response.text())
-  .then(htmlContent => {
-    const parser = new DOMParser();
-    const tableDocument = parser.parseFromString(htmlContent, 'text/html');
-    const tableElement = tableDocument.querySelector('table');
+	.then(response => response.text())
+	.then(htmlContent => {
+		const parser = new DOMParser();
+		const tableDocument = parser.parseFromString(htmlContent, 'text/html');
+		const tableElement = tableDocument.querySelector('table');
 
-    const targetLocation = document.querySelector('#horarios');
-    const clonedTableElement = tableElement.cloneNode(true);
+		const targetLocation = document.querySelector('#horarios');
+		const clonedTableElement = tableElement.cloneNode(true);
 
-    targetLocation.appendChild(clonedTableElement);
-  });
+		targetLocation.appendChild(clonedTableElement);
+	});
 
 
 
@@ -139,7 +209,7 @@ for (const button of buttons) {
 			});
 		}
 
-	// Update active lines based on the clicked button :
+		// Update active lines based on the clicked button :
 		if (this.id.endsWith(' off')) {
 			const newId = this.id.replace(' off', ' on');
 			button.id = newId;
@@ -163,10 +233,10 @@ for (const button of buttons) {
 			displayLineText.style.fontWeight = "400"
 			displayLineText.textContent = `Bus ${selectedButtonName}`;
 
-			console.log(showThisHorario);
+			// console.log(showThisHorario);
 			image.src = showThisHorario
 
-		// When there's no line selected :
+			// When there's no line selected :
 		} else if (this.id.endsWith(' on')) {
 			const newId = this.id.replace(' on', ' off');
 			button.id = newId;

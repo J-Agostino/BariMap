@@ -333,6 +333,8 @@ button:active {
     cursor: pointer;
 }
 
+.vuelta {background-color: rgba(0, 0, 0, 0);}
+
 button, .side-button:hover {
     border: 1px solid rgba(255, 255, 255, 0.377);
 }
