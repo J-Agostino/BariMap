@@ -180,7 +180,7 @@ for (const button of buttons) {
 		let trayectory = this.id.split(' ');
 		let departure = trayectory[0]; // I'm using this to display the schedule(horarios)
 		let returnLine = trayectory[1];
-		 console.log(departure);
+		//  console.log(departure);
 		let newDisplayLine
 		const selectedButtonName = button.textContent;
 		let displayLineText = document.querySelector(".display-line");
@@ -219,10 +219,27 @@ for (const button of buttons) {
 			.then(htmlContent => {
     	const parser = new DOMParser();
     	const sourceDocument = parser.parseFromString(htmlContent, 'text/html');
-    	const targetElement = sourceDocument.querySelectorAll('#' + departure); // Grab by button id
-		// console.log(targetElement);
+    	let targetElement = sourceDocument.querySelectorAll(`#${departure} `); // Grab by button id
+		console.log(targetElement);
+		console.log(button);
+		if (targetElement.length === 0) {
+			if (departure === 'b22Ida') {
+				console.log(targetElement, "Here bitch");
+				targetElement = sourceDocument.querySelectorAll('#b13')
+				console.log(targetElement, "tada?");
+
+			} else if (departure === "b81Ida") {
+				console.log(targetElement, "here again");
+				targetElement = sourceDocument.querySelectorAll('#b71Ida')
+
+			} else if (departure === "b55bIda") {
+			targetElement = sourceDocument.querySelectorAll('#b55Ida')
+			}
+						
+		}
 		targetElement.forEach(element => {
   			const clonedElement = element.cloneNode(true);
+			console.log(clonedElement, "cloned");
   			targetLocation.appendChild(clonedElement);
 			});
 		// console.log(targetElement);
