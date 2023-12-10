@@ -506,13 +506,14 @@ button, .side-button:hover {
     background-color: var(--PRIMARY);
     flex: 1;
     height: 100%;
+    width: 100px;
     border-radius: 5px;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-evenly;
     flex-flow: column nowrap;
     overflow: scroll;
-    overflow-x: hidden;
+    overflow-x: auto;
 }
 
 .horarios-image {
@@ -553,7 +554,7 @@ footer {
         /* background-color: aquamarine; */
         height: 150vh;
     }
-    nav, .title {
+    nav, .web-title {
         position: sticky;
         height: 70px;
         display: flex;

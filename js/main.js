@@ -150,23 +150,21 @@ const horarios = {
 	},
 }
 
-fetch('./servicios.html')
-	.then(response => response.text())
-	.then(htmlContent => {
-		const parser = new DOMParser();
-		const tableDocument = parser.parseFromString(htmlContent, 'text/html');
-		const tableElement = tableDocument.querySelector('table');
+//  fetch('./servicios.html')
+//  	.then(response => response.text())
+//  	.then(htmlContent => {
+//      	const parser = new DOMParser();
+//      	const sourceDocument = parser.parseFromString(htmlContent, 'text/html');
+//      	const targetElement = sourceDocument.querySelector('#b10');
+//      	const clonedElement = targetElement.cloneNode(true);
+//  		console.log(targetElement)	
+//      	// const targetDocument = document;
+//      	const targetLocation = document.querySelector(".horarios-img-container");
+//      	targetLocation.appendChild(clonedElement);
+//  	});
 
-		const targetLocation = document.querySelector('#horarios');
-		const clonedTableElement = tableElement.cloneNode(true);
-
-		targetLocation.appendChild(clonedTableElement);
-	});
-
-
-
-
-
+// const hrContainer = document.querySelector(".horarios-img-container")
+// console.log(hrContainer);
 
 
 // Button stuff
@@ -175,15 +173,19 @@ let whoIsOn = null; // Track the currently active button ID
 let buttons = document.querySelectorAll(".button");
 for (const button of buttons) {
 	button.addEventListener('click', function () {
+
+		const hrBus = document.querySelectorAll('.n_bus')
+		console.log();
+
 		let trayectory = this.id.split(' ');
 		let departure = trayectory[0]; // I'm using this to display the schedule(horarios)
 		let returnLine = trayectory[1];
-		// console.log(departure);
+		 console.log(departure);
 		let newDisplayLine
 		const selectedButtonName = button.textContent;
 		let displayLineText = document.querySelector(".display-line");
 
-		const image = document.getElementById('horarios');
+		// const image = document.getElementById('horarios');
 
 		if (onOffReturn === 1) {
 			newDisplayLine = L.geoJSON(individualLines[returnLine], {
@@ -208,6 +210,26 @@ for (const button of buttons) {
 				return layer.feature.properties.name;
 			});
 		}
+
+    	const targetLocation = document.querySelector(".horarios-img-container");
+		targetLocation.innerHTML = ''
+
+		fetch('./servicios.html')
+			.then(response => response.text())
+			.then(htmlContent => {
+    	const parser = new DOMParser();
+    	const sourceDocument = parser.parseFromString(htmlContent, 'text/html');
+    	const targetElement = sourceDocument.querySelector('#' + departure);
+		console.log(targetElement);
+    	const clonedElement = targetElement.cloneNode(true);
+		console.log(targetElement);
+
+		targetLocation.appendChild(clonedElement);
+		});
+
+
+
+
 
 		// Update active lines based on the clicked button :
 		if (this.id.endsWith(' off')) {
@@ -234,7 +256,7 @@ for (const button of buttons) {
 			displayLineText.textContent = `Bus ${selectedButtonName}`;
 
 			// console.log(showThisHorario);
-			image.src = showThisHorario
+			// image.src = showThisHorario
 
 			// When there's no line selected :
 		} else if (this.id.endsWith(' on')) {
