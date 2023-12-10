@@ -62,110 +62,6 @@ for (const returnLine of returnButton) {
 	})
 }
 
-// Schedule images
-const horarios = {
-	b10: {
-		week: "imgs-horarios/10-LV.png"
-	},
-	b13: {
-		week: "imgs-horarios/13-22-IDK.png"
-	},
-	b20: {
-		week: "imgs-horarios/20-LV.png"
-	},
-	b21: {
-		week: "imgs-horarios/21-LV.png"
-	},
-	b22Ida: {
-		week: "imgs-horarios/13-22IDK.png",
-		weekend: "imgs-horarios/.png"
-	},
-	b30Ida: {
-		week: "imgs-horarios/30-LS.png",
-		weekend: "imgs-horarios/.png"
-	},
-	b31Ida: {
-		week: "imgs-horarios/31-.png",
-		weekend: "imgs-horarios/.png"
-	},
-	b40Ida: {
-		week: "imgs-horarios/.png",
-		weekend: "imgs-horarios/.png"
-	},
-	b41Ida: {
-		week: "imgs-horarios/.png",
-		weekend: "imgs-horarios/.png"
-	},
-	b50Ida: {
-		week: "imgs-horarios/.png",
-		weekend: "imgs-horarios/.png"
-	},
-	b51Ida: {
-		week: "imgs-horarios/.png",
-		weekend: "imgs-horarios/.png"
-	},
-	b55Ida: {
-		week: "imgs-horarios/.png",
-		weekend: "imgs-horarios/.png"
-	},
-	b55bIda: {
-		week: "imgs-horarios/.png",
-		weekend: "imgs-horarios/.png"
-	},
-	b60Ida: {
-		week: "imgs-horarios/.png",
-		weekend: "imgs-horarios/.png"
-	},
-	b61Ida: {
-		week: "imgs-horarios/.png",
-		weekend: "imgs-horarios/.png"
-	},
-	b70Ida: {
-		week: "imgs-horarios/.png",
-		weekend: "imgs-horarios/.png"
-	},
-	b71Ida: {
-		week: "imgs-horarios/71-81-HABIL.png",
-		weekend: "imgs-horarios/"
-	},
-	b72Ida: {
-		week: "imgs-horarios/.png",
-		weekend: "imgs-horarios/.png"
-	},
-	b80Ida: {
-		week: "imgs-horarios/.png",
-		weekend: "imgs-horarios/.png"
-	},
-	b81Ida: {
-		week: "imgs-horarios/71-81-HABIL.png",
-		weekend: "imgs-horarios/"
-	},
-	b82Ida: {
-		week: "imgs-horarios/.png",
-		weekend: "imgs-horarios/.png"
-	},
-	b84Ida: {
-		week: "imgs-horarios/.png",
-		weekend: "imgs-horarios/.png"
-	},
-}
-
-//  fetch('./servicios.html')
-//  	.then(response => response.text())
-//  	.then(htmlContent => {
-//      	const parser = new DOMParser();
-//      	const sourceDocument = parser.parseFromString(htmlContent, 'text/html');
-//      	const targetElement = sourceDocument.querySelector('#b10');
-//      	const clonedElement = targetElement.cloneNode(true);
-//  		console.log(targetElement)	
-//      	// const targetDocument = document;
-//      	const targetLocation = document.querySelector(".horarios-img-container");
-//      	targetLocation.appendChild(clonedElement);
-//  	});
-
-// const hrContainer = document.querySelector(".horarios-img-container")
-// console.log(hrContainer);
-
 
 // Button stuff
 let displayLine;
@@ -174,18 +70,12 @@ let buttons = document.querySelectorAll(".button");
 for (const button of buttons) {
 	button.addEventListener('click', function () {
 
-		const hrBus = document.querySelectorAll('.n_bus')
-		console.log();
-
 		let trayectory = this.id.split(' ');
 		let departure = trayectory[0]; // I'm using this to display the schedule(horarios)
 		let returnLine = trayectory[1];
-		//  console.log(departure);
 		let newDisplayLine
 		const selectedButtonName = button.textContent;
 		let displayLineText = document.querySelector(".display-line");
-
-		// const image = document.getElementById('horarios');
 
 		if (onOffReturn === 1) {
 			newDisplayLine = L.geoJSON(individualLines[returnLine], {
@@ -220,36 +110,26 @@ for (const button of buttons) {
     	const parser = new DOMParser();
     	const sourceDocument = parser.parseFromString(htmlContent, 'text/html');
     	let targetElement = sourceDocument.querySelectorAll(`#${departure} `); // Grab by button id
-		console.log(targetElement);
-		console.log(button);
-		if (targetElement.length === 0) {
-			if (departure === 'b22Ida') {
-				console.log(targetElement, "Here bitch");
-				targetElement = sourceDocument.querySelectorAll('#b13')
-				console.log(targetElement, "tada?");
 
-			} else if (departure === "b81Ida") {
-				console.log(targetElement, "here again");
-				targetElement = sourceDocument.querySelectorAll('#b71Ida')
-
-			} else if (departure === "b55bIda") {
-			targetElement = sourceDocument.querySelectorAll('#b55Ida')
+			if (targetElement.length === 0) {
+				if (departure === 'b22Ida') {
+					targetElement = sourceDocument.querySelectorAll('#b13')
+				} else if (departure === "b81Ida") {
+					targetElement = sourceDocument.querySelectorAll('#b71Ida')
+				} else if (departure === "b55bIda") {
+				targetElement = sourceDocument.querySelectorAll('#b55Ida')
+				}
 			}
-						
-		}
-		targetElement.forEach(element => {
-  			const clonedElement = element.cloneNode(true);
-			console.log(clonedElement, "cloned");
-  			targetLocation.appendChild(clonedElement);
+			targetElement.forEach(element => {
+				const clonedElement = element.cloneNode(true);
+				targetLocation.appendChild(clonedElement);
+				});
 			});
-		// console.log(targetElement);
-		});
 
 		// Update active lines based on the clicked button :
 		if (this.id.endsWith(' off')) {
 			const newId = this.id.replace(' off', ' on');
 			button.id = newId;
-			const showThisHorario = horarios[departure]["week"] //Returns the content, the string that goes into src=""
 			// Toggle the previously active button's state if there is one
 			if (whoIsOn !== null) {
 				const previousButtonId = whoIsOn;
@@ -268,9 +148,6 @@ for (const button of buttons) {
 			displayLine.addTo(map);
 			displayLineText.style.fontWeight = "400"
 			displayLineText.textContent = `Bus ${selectedButtonName}`;
-
-			// console.log(showThisHorario);
-			// image.src = showThisHorario
 
 			// When there's no line selected :
 		} else if (this.id.endsWith(' on')) {
