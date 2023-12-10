@@ -605,9 +605,7 @@ table {
     }
     .horarios-img-container{
         max-height: 500px;
-    }
-    .horarios-image{
-        width: 100%;
+        align-items: flex-start;
     }
 }
 
