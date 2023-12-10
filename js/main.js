@@ -211,25 +211,22 @@ for (const button of buttons) {
 			});
 		}
 
+		// Display horarios
     	const targetLocation = document.querySelector(".horarios-img-container");
-		targetLocation.innerHTML = ''
-
+		targetLocation.innerHTML = '' // Clear the div space for next horario
 		fetch('./servicios.html')
 			.then(response => response.text())
 			.then(htmlContent => {
     	const parser = new DOMParser();
     	const sourceDocument = parser.parseFromString(htmlContent, 'text/html');
-    	const targetElement = sourceDocument.querySelector('#' + departure);
-		console.log(targetElement);
-    	const clonedElement = targetElement.cloneNode(true);
-		console.log(targetElement);
-
-		targetLocation.appendChild(clonedElement);
+    	const targetElement = sourceDocument.querySelectorAll('#' + departure); // Grab by button id
+		// console.log(targetElement);
+		targetElement.forEach(element => {
+  			const clonedElement = element.cloneNode(true);
+  			targetLocation.appendChild(clonedElement);
+			});
+		// console.log(targetElement);
 		});
-
-
-
-
 
 		// Update active lines based on the clicked button :
 		if (this.id.endsWith(' off')) {
