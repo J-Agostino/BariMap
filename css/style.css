@@ -558,7 +558,7 @@ table {
 @media only screen and (max-width: 600px) {
     body {
         /* background-color: aquamarine; */
-        height: 150vh;
+        /* height: 150vh; */
     }
     nav, .web-title {
         position: sticky;
