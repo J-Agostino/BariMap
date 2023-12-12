@@ -205,6 +205,10 @@ nav {
     
 }
 
+#translate-button {
+    color: #26220d;
+}
+
 .map__container {
     background-color: rgba(0, 0, 255, 0.048);
     display: flex;
@@ -255,7 +259,7 @@ nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     
 }
 

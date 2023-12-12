@@ -35,7 +35,7 @@ for (const returnLine of returnButton) {
 
 		// Toggle ida-vuelta button
 		const mySelector = returnLine.textContent // Tells the content of the element
-		if (mySelector === "Ida") {
+		if (mySelector === "Ida" || mySelector === "Out") {
 			returnLine.style.background = "rgba(240, 248, 255, 0.219)"
 			returnButton[1].style.background = "rgba(240, 248, 255, 0)";
 			// Change the background color nav
@@ -102,27 +102,27 @@ for (const button of buttons) {
 		}
 
 		// Display horarios
-    	const targetLocation = document.querySelector(".horarios-img-container");
+		const targetLocation = document.querySelector(".horarios-img-container");
 		targetLocation.innerHTML = '' // Clear the div space for next horario
 		fetch('./servicios.html')
 			.then(response => response.text())
 			.then(htmlContent => {
-    	const parser = new DOMParser();
-    	const sourceDocument = parser.parseFromString(htmlContent, 'text/html');
-    	let targetElement = sourceDocument.querySelectorAll(`#${departure} `); // Grab by button id
+				const parser = new DOMParser();
+				const sourceDocument = parser.parseFromString(htmlContent, 'text/html');
+				let targetElement = sourceDocument.querySelectorAll(`#${departure} `); // Grab by button id
 
-			if (targetElement.length === 0) {
-				if (departure === 'b22Ida') {
-					targetElement = sourceDocument.querySelectorAll('#b13')
-				} else if (departure === "b81Ida") {
-					targetElement = sourceDocument.querySelectorAll('#b71Ida')
-				} else if (departure === "b55bIda") {
-				targetElement = sourceDocument.querySelectorAll('#b55Ida')
+				if (targetElement.length === 0) {
+					if (departure === 'b22Ida') {
+						targetElement = sourceDocument.querySelectorAll('#b13')
+					} else if (departure === "b81Ida") {
+						targetElement = sourceDocument.querySelectorAll('#b71Ida')
+					} else if (departure === "b55bIda") {
+						targetElement = sourceDocument.querySelectorAll('#b55Ida')
+					}
 				}
-			}
-			targetElement.forEach(element => {
-				const clonedElement = element.cloneNode(true);
-				targetLocation.appendChild(clonedElement);
+				targetElement.forEach(element => {
+					const clonedElement = element.cloneNode(true);
+					targetLocation.appendChild(clonedElement);
 				});
 			});
 
@@ -162,3 +162,37 @@ for (const button of buttons) {
 		}
 	});
 }
+
+//Translation
+const translateButton = document.querySelector("#translate-button")
+let whichLanguage = "english"
+
+translateButton.addEventListener('click', function () {
+	const translatedWords = ["Bus Lines", "Out", "Return", "Showing", "Outbound bus", "Aprox freq:", "-- minutes", "See full schedule"]
+	let translatedCounter = 0
+	const translate = document.querySelectorAll("#translate")
+	const spanishText = ['Líneas', 'Ida', 'Vuelta', 'Mostrando: ', 'Buses ida', 'Frecuencia aprox:', '-- minutos', 'Más info horaria']
+	//translate to english
+	if (whichLanguage === "english") {
+
+		//Change the words for me please
+		translate.forEach((text) => {
+			const actTranslation = translatedWords[translatedCounter]
+			text.textContent = actTranslation
+			translatedCounter++
+		})
+		whichLanguage = "spanish"
+		translatedCounter = 0
+		translateButton.textContent = "Traducir"
+		//translate to spanish
+	} else if (whichLanguage === "spanish") {
+		translate.forEach((text) => {
+			const actTranslation = spanishText[translatedCounter]
+			text.textContent = actTranslation
+			translatedCounter++
+		})
+		whichLanguage = "english"
+		translatedCounter = 0
+		translateButton.textContent = "Translate"
+	}
+})
