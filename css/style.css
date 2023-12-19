@@ -204,7 +204,10 @@ nav {
     text-decoration: none;
 }
 
-
+.web-title {
+    color: inherit;
+    text-decoration: none;
+}
 
 #translate-button {
     color: #26220d;
