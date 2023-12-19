@@ -168,10 +168,10 @@ const translateButton = document.querySelector("#translate-button")
 let whichLanguage = "english"
 
 translateButton.addEventListener('click', function () {
-	const translatedWords = ["Bus Lines", "Out", "Return", "Showing", "Outbound bus", "Aprox freq:", "-- minutes", "See full schedule"]
+	const translatedWords = ["Project", "Contact", "Bus Lines", "Out", "Return", "Showing:", "Outbound bus", "Aprox freq:", "-- minutes", "See full schedule"]
 	let translatedCounter = 0
 	const translate = document.querySelectorAll("#translate")
-	const spanishText = ['Líneas', 'Ida', 'Vuelta', 'Mostrando: ', 'Buses ida', 'Frecuencia aprox:', '-- minutos', 'Más info horaria']
+	const spanishText = ['Proyecto', 'Contacto','Líneas', 'Ida', 'Vuelta', 'Mostrando: ', 'Buses ida', 'Frecuencia aprox:', '-- minutos', 'Más info horaria']
 	//translate to english
 	if (whichLanguage === "english") {
 
