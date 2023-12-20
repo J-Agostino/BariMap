@@ -568,12 +568,28 @@ table {
         /* background-color: aquamarine; */
         /* height: 150vh; */
     }
-    nav, .web-title {
+    nav, .nav-container {
         position: sticky;
-        height: 70px;
         display: flex;
         justify-content: center;
         align-items: center;
+
+    }    /* Not ideal, but it works for now */
+
+    #translate-button {
+        margin: 50px;
+    } 
+    /* Not ideal, but it works for now */
+    .a-nav {
+        font-size: small;
+        left: -10000px;
+        position: fixed;
+    }
+    .web-title {
+        display: flex;
+        align-items: center;
+        height: 70px;
+        font-size: x-large;
     }
     #map {
     height: 50vh; 
