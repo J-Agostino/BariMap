@@ -194,14 +194,20 @@ nav {
 }
 
 .a-nav {
+    box-sizing: border-box;
     font-size: 1.5rem;
-    height: 40px;
+    height: 100%;
     width: 9rem;
     display: flex;
     align-items: center;
     justify-content: center;
     color: inherit;
     text-decoration: none;
+}
+
+.a-nav:hover {
+    border: 1px solid red; 
+
 }
 
 .web-title {
@@ -564,10 +570,6 @@ table {
 /* ------ RESPONSIVE ------- */
 /* Vertical phone */
 @media only screen and (max-width: 600px) {
-    body {
-        /* background-color: aquamarine; */
-        /* height: 150vh; */
-    }
     nav, .nav-container {
         position: sticky;
         display: flex;
